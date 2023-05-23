@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "midi_driver.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,7 +96,8 @@ int main(void)
   MX_TIM2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  midi_t midi_struct = {1,&huart1};
+  uint8_t note = 64;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,6 +107,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  note_on(64,midi_struct);
+	  HAL_Delay(200);
+	  note_off(64,midi_struct);
+	  HAL_Delay(200);
   }
   /* USER CODE END 3 */
 }
