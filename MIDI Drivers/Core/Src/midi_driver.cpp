@@ -23,7 +23,7 @@ midi_messages messages = {0x80, 0x90, 0x08};
 */
 void note_on(uint32_t note, midi_t midi_struct)
 {
-	  buffer[0] = midi_messages.note_on;
+	  buffer[0] = messages.note_on;
 	  buffer[1] = 0x90 | midi_struct.channel;
 	  buffer[2] = 0x7f & note;
 	  send_midi(*buffer,midi_struct);

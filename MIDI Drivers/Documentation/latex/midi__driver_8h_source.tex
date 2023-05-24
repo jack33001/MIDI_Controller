@@ -1,0 +1,27 @@
+\hypertarget{midi__driver_8h_source}{}\doxysection{midi\+\_\+driver.\+h}
+\label{midi__driver_8h_source}\index{Core/Inc/midi\_driver.h@{Core/Inc/midi\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_MIDI\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_MIDI\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32f4xx__hal_8h}{stm32f4xx\_hal.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmidi__struct}{midi\_struct}}\{}
+\DoxyCodeLine{00006\ \ \ \ \ uint32\_t\ channel;}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}*\ uartptr;}
+\DoxyCodeLine{00008\ \}\mbox{\hyperlink{structmidi__struct}{midi\_t}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmidi__messages}{midi\_messages}}\{}
+\DoxyCodeLine{00011\ \ \ \ \ uint8\_t\ note\_on;}
+\DoxyCodeLine{00012\ \ \ \ \ uint8\_t\ note\_off;}
+\DoxyCodeLine{00013\ \ \ \ \ uint8\_t\ midi\_cc;}
+\DoxyCodeLine{00014\ \}\mbox{\hyperlink{structmidi__messages}{midi\_messages}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ note\_on(uint32\_t\ note,\ \mbox{\hyperlink{structmidi__struct}{midi\_t}}\ \mbox{\hyperlink{structmidi__struct}{midi\_struct}});}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ note\_off(uint32\_t\ note,\ \mbox{\hyperlink{structmidi__struct}{midi\_t}}\ \mbox{\hyperlink{structmidi__struct}{midi\_struct}});}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ midi\_cc(\mbox{\hyperlink{structmidi__struct}{midi\_t}}\ \mbox{\hyperlink{structmidi__struct}{midi\_struct}},\ uint32\_t\ cc\_num,\ uint32\_t\ value);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ send\_midi(\textcolor{keywordtype}{char}\ msg,\ \mbox{\hyperlink{structmidi__struct}{midi\_t}}\ \mbox{\hyperlink{structmidi__struct}{midi\_struct}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ \_\_MIDI\_H}}
+
+\end{DoxyCode}
