@@ -15,7 +15,7 @@ typedef struct midi_messages{
 
 void note_on(uint32_t note, midi_t midi_struct);
 void note_off(uint32_t note, midi_t midi_struct);
-void midi_cc(midi_t midi_struct, uint32_t cc_num, uint32_t value);
+void midi_cc(uint32_t cc_num, uint32_t value, midi_t midi_struct);
 void send_midi(char msg, midi_t midi_struct);
 
 #endif __MIDI_H

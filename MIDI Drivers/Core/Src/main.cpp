@@ -107,9 +107,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  note_on(64,midi_struct);
+	  midi_cc(74,50,midi_struct);
+	  note_on(60,midi_struct);
 	  HAL_Delay(200);
-	  note_off(64,midi_struct);
+	  note_off(60,midi_struct);
+	  HAL_Delay(200);
+
+	  midi_cc(74,100,midi_struct);
+	  note_on(60,midi_struct);
+	  HAL_Delay(200);
+	  note_off(60,midi_struct);
 	  HAL_Delay(200);
   }
   /* USER CODE END 3 */
@@ -283,7 +290,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 31250;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;

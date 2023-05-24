@@ -1,4 +1,4 @@
 midi_driver.cpp:24:6:void note_on(uint32_t, midi_t)	1
-midi_driver.cpp:34:6:void note_off(uint32_t, midi_t)	1
-midi_driver.cpp:44:6:void midi_cc(midi_t, uint32_t, uint32_t)	1
-midi_driver.cpp:52:6:void send_midi(char, midi_t)	1
+midi_driver.cpp:35:6:void note_off(uint32_t, midi_t)	1
+midi_driver.cpp:46:6:void midi_cc(uint32_t, uint32_t, midi_t)	1
+midi_driver.cpp:55:6:void send_midi(char, midi_t)	1
