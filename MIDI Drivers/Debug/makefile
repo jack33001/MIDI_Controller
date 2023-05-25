@@ -75,8 +75,8 @@ all: main-build
 main-build: midi_drivers.elf secondary-outputs
 
 # Tool invocations
-midi_drivers.elf midi_drivers.map: $(OBJS) $(USER_OBJS) /home/jack/Documents/Cube\ IDE\ Workspace/Final\ Project/MIDI_Controller/MIDI\ Drivers/STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "midi_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/jack/Documents/Cube IDE Workspace/Final Project/MIDI_Controller/MIDI Drivers/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midi_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+midi_drivers.elf midi_drivers.map: $(OBJS) $(USER_OBJS) D:\MIDI_Controller\MIDI\ Drivers\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "midi_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\MIDI_Controller\MIDI Drivers\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midi_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
